@@ -1,4 +1,5 @@
 //an array of movies not watched yet
+let watchlist = ["The Good Place: The Movie", "Captain America", "Kingdom of the Planet of the Apes"]
 
 //a second arrays of movies already watched
 
