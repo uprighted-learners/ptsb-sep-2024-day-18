@@ -53,3 +53,39 @@ function viewWatchedMovies() {
 }
 
 //main menu function =)
+function startApp() {
+    let action;
+
+    do {
+        action = prompt(`
+            Choose an action:
+            1. Add a movie to watchlist
+            2. Mark a movie as watched
+            3. View watchlist
+            4. View watched movies
+            5. Exit`
+        );
+
+        switch (action) {
+            case "1":
+                addMovie();
+                break;
+            case "2":
+                markWatched();
+                break;
+            case "3":
+                viewWatchList();
+                break;
+            case "4":
+                viewWatchedMovies();
+                break;
+            case "5":
+                console.log("Goodbye!");
+                break;
+            default:
+                console.log("Invalid action. Please try again.");
+        }
+    } while (action !== "5");
+}
+
+startApp();
