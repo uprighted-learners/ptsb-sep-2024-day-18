@@ -8,7 +8,7 @@ let watchedMovies = ["Matrix", "Speed", "John Wick", "Band of Brothers"]
 function addMovie() {
     let newMovie = prompt("What movie do you want to watch?")
     console.log(newMovie)
-    watchlist.unshift(newMovie)
+    watchlist.push(newMovie)
     console.log(watchlist)
 }
 
@@ -28,8 +28,28 @@ function markWatched() {
     }
 }
 
-//a function to view movies on watch list
+// function to view movies on watchlist
+function viewWatchList() {
+    if (watchlist.length === 0) {
+        console.log("your watch list is empty")
+    } else {
+        console.log("Your watch list;")
+        for (let i = 0; i < watchlist.length; i++) {
+            console.log(`${i + 1}. ${watchlist[i]} is in your watchlist.`)
+        }
+    }
+}
 
-//a function to view ALL movies (both lists)
+// a function to view movies on watched list
+function viewWatchedMovies() {
+    if (watchedMovies.length === 0) {
+        console.log("Your watched list is empty.")
+    } else {
+        console.log("Movies you have watched: ");
+        watchedMovies.forEach((movie, i) => {
+            console.log(`${i + 1}. ${movie} is in your watchlist.`);
+        })
+    }
+}
 
 //main menu function =)
